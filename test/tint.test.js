@@ -14,10 +14,17 @@ describe('tinting', function() {
             if (parts.length > 1) o.hue = parseFloat(parts[1]);
             if (parts.length > 2) o.saturation = parseFloat(parts[2]);
             if (parts.length > 3) o.invert = parts[3] == 'negative';
-            if (parts.length > 4) o.x0 = parseFloat(parts[4]);
-            if (parts.length > 5) o.y0 = parseFloat(parts[5]);
-            if (parts.length > 6) o.x1 = parseFloat(parts[6]);
-            if (parts.length > 7) o.y1 = parseFloat(parts[7]);
+            if (parts.length == 6) {
+                o.x0 = parseFloat(parts[4]);
+                o.y0 = parseFloat(parts[5]);
+                o.x1 = 1 - o.x0;
+                o.y1 = 1 - o.y0;
+            } else if (parts.length == 8) {
+                o.x0 = parseFloat(parts[4]);
+                o.y0 = parseFloat(parts[5]);
+                o.x1 = parseFloat(parts[6]);
+                o.y1 = parseFloat(parts[7]);
+            }
 
             var testName = name;
             if ('hue' in o) testName += ', hue=' + o.hue + '°';
