@@ -11,6 +11,8 @@
     "node": "0.6.x"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "0.12.x"
+  },
   "optionalDependencies": {}
 }
