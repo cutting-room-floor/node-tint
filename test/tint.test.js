@@ -36,7 +36,7 @@ describe('tinting', function() {
             it(testName, function() {
                 var source = fs.readFileSync('./test/source/' + name + '.png');
                 tint(source, o);
-                // fs.writeFileSync('./test/tinted/' + file, source);
+                // fs.writeFileSync('./test/actual/' + file, source);
                 var result = fs.readFileSync('./test/tinted/' + file);
                 assert.deepEqual(source, result);
             });
