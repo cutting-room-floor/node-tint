@@ -2,7 +2,7 @@
   "author": "Konstantin Käfer <github@kkaefer.com>",
   "name": "tint",
   "description": "Tints paletted grayscale images",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "url": ""
   },
