@@ -7,7 +7,10 @@ var mappings = {
     '20': { hue: 20 },
     '20;40': { hue: 20, saturation: 40 },
     '30;84;0.5': { hue: 30, saturation: 84, y0: 0.5 },
-    '30;84;.3;.2': { hue: 30, saturation: 84, y0: 0.3, y1: 0.2 }
+    '30;84;.3;.2': { hue: 30, saturation: 84, y0: 0.3, y1: 0.2 },
+    'ffffff': { hue: 0, saturation: 0, y0: 0, y1: 1 },
+    'ff7f00': { hue: 30.29738562091503, saturation: 100, y0: 0, y1: 0.5 },
+    '#4c2d00': { hue: 36.01973684210527, saturation: 100, y0: 1, y1: 0.14901960784313725 }
 };
 
 describe('parse string', function() {
