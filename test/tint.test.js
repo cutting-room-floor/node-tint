@@ -10,11 +10,7 @@ describe('tinting', function() {
             // Parse parameters from filename.
             var parts = path.basename(file, '.png').split('_');
             var name = parts[0];
-            var o = {};
-            if (parts.length > 1) o.hue = parseFloat(parts[1]);
-            if (parts.length > 2) o.saturation = parseFloat(parts[2]);
-            if (parts.length > 3) o.y0 = parseFloat(parts[3]);
-            if (parts.length > 4) o.y1 = parseFloat(parts[4]);
+            var o = tint.parseString(parts[1] || '');
 
             var testName = name;
             if ('hue' in o) testName += ', hue=' + o.hue + '°';
