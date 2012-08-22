@@ -17,11 +17,12 @@ describe('tinting', function() {
             if ('saturation' in o) testName += ', saturation=' + o.saturation + '%';
             if ('y0' in o) testName += ', y0=' + o.y0.toFixed(2);
             if ('y1' in o) testName += ', y1=' + o.y1.toFixed(2);
+            if ('opacity' in o) testName += ', opacity=' + o.opacity.toFixed(2);
 
             it(testName, function() {
                 var source = fs.readFileSync('./test/source/' + name + '.png');
                 var tinted = tint(source, o);
-                // fs.writeFileSync('./test/tinted/' + file, tinted);
+                fs.writeFileSync('./test/tinted/' + file, tinted);
                 var result = fs.readFileSync('./test/tinted/' + file);
                 assert.deepEqual(tinted, result);
             });
