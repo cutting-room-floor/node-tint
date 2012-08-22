@@ -20,10 +20,10 @@ describe('tinting', function() {
 
             it(testName, function() {
                 var source = fs.readFileSync('./test/source/' + name + '.png');
-                tint(source, o);
-                // fs.writeFileSync('./test/tinted/' + file, source);
+                var tinted = tint(source, o);
+                // fs.writeFileSync('./test/tinted/' + file, tinted);
                 var result = fs.readFileSync('./test/tinted/' + file);
-                assert.deepEqual(source, result);
+                assert.deepEqual(tinted, result);
             });
         });
 });
