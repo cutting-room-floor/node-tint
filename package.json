@@ -14,5 +14,8 @@
   "devDependencies": {
     "mocha": ">= 0.11"
   },
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "scripts": {
+      "test": "mocha -R spec"
+  }
 }
