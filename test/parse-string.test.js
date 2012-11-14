@@ -6,11 +6,11 @@ var mappings = {
     '': {},
     '20': { hue: 20 },
     '20;40': { hue: 20, saturation: 40 },
-    '30;90;0': { hue: 30, saturation: 90, invert: false },
-    '30.934;84.3;0': { hue: 30.934, saturation: 84.3, invert: false },
-    '30.934;84.3;1': { hue: 30.934, saturation: 84.3, invert: true },
-    '30;84;0;.3;.2': { hue: 30, saturation: 84, invert: false, x0: 0.3, y0: 0.2, x1: 0.7, y1: 0.8 },
-    '30;84;0;.3;.2;1;1': { hue: 30, saturation: 84, invert: false, x0: 0.3, y0: 0.2, x1: 1, y1: 1 }
+    '30;84;0.5': { hue: 30, saturation: 84, y0: 0.5 },
+    '30;84;.3;.2': { hue: 30, saturation: 84, y0: 0.3, y1: 0.2 },
+    'ffffff': { hue: 0, saturation: 0, y0: 0, y1: 2 },
+    'ff7f00': { hue: 30.29738562091503, saturation: 100, y0: 0, y1: 1 },
+    '#4c2d00': { hue: 36.01973684210527, saturation: 100, y0: -0.7019607843137254, y1: 1 }
 };
 
 describe('parse string', function() {
